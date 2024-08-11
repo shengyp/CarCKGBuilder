@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CarCKGBuilder: A Novel Carbon-Assessed Crop Knowledge Graph Construction in Agricultural Domain for Carbon Effects Analytics | CarCKGBuilder</title>
+    <title>CarCKGBuilder: A Novel Carbon-Assessed Crop Knowledge Graph Construction in Agricultural Domain for Carbon Effects Analytics</title>
     <link rel="stylesheet" href="./index.css">
 </head>
 
@@ -32,12 +32,12 @@
             <p>Under review on ACM Multimedia Asia 2024</p>
         </div>
         <div class="container">
-            <div class="auther">
+            <div class="author">
                 <span><a href="http://smilelab.uestc.edu.cn/members/shengyongpan/">Yongpan Sheng</a><sup class="auther-order">1,2</sup></span>
                 <span><a href="#">Tangyunzhi Jiang</a><sup class="auther-order">1</sup></span>
                 <span><a href="#">Yujie Song</a><sup class="auther-order">1</sup></span>
-                <span><a href="">Lirong He</a><sup class="auther-order">3</sup></span>
-                <span><a href="">Xiangwei Lai</a><sup class="auther-order">1</sup></span>
+                <span><a href="https://lironghuo.github.io/">Lirong He</a><sup class="auther-order">3</sup></span>
+                <span><a href="http://cis.swu.edu.cn/info/1014/1220.htm">Xiangwei Lai</a><sup class="auther-order">1</sup></span>
             </div>
             <p></p>
              <div class="auther-apart">
@@ -55,23 +55,22 @@
         <p></p>
         <section class="para">
             <h3 class="para-title">Abstract</h3>
-            <p class="context">Faced with the overwhelming amounts of data in the 24/7 stream of new articles appearing online, it is often helpful to consider only the key entities and concepts and their relationships. This is challenging, as relevant connections may be spread across a number of disparate articles and sources. In this paper, we present a system that extracts salient entities, concepts, and their relationships from a set of related documents, discovers connections within and across them, and presents the resulting information in a graph-based visualization. We rely on a series of natural language processing methods, including open-domain information extraction, a special filtering method to maintain only meaningful relationships, and a heuristic to form graphs with a high coverage rate of topic entities and concepts. Our graph visualization then allows users to explore these connections. In our experiments, we rely on a large collection of news crawled from the Web 
-and show how connections within this data can be explored.
+            <p class="context">In this paper, we have developed a novel carbon-assessed agricultural crop knowledge graph construction framework, named CarKGBuilder. On the benefit of designing and applying NLP and deep learning models, CarKGBuilder can automatically integrate agricultural crop data from the heterogeneous corpus and link them to form a knowledge graph. Moreover, we illustrate typical scenarios of our CarCKGBuilder to validate its effectiveness and potential worthiness for carbon effects analytics, such as crops-aware carbon effect maps in diverse zones, crops-aware concept hierarchy construction, crops-aware entity retrieval, and so forth.
             </p>
         </section>
         <section class="para">
-            <h3 class="para-title">How dose the system works?</h3>
+            <h3 class="para-title">How does the Carbon-Assessed Agricultural Crop Knowledge Graph Construction?</h3>
             <p class="context">The objective of our system is to support the user in quickly extracting salient entities, concepts, and their relationships from a set of related documents, discovers connections within and across them, and presents the resulting information in a graph-based interactive visualization. It is componsed of three major components, including fact extraction, fact filtering, conceptual graph construction module, respectively. In the following, we will present the output resulting information of our system via a concrete example.</p>
                 <ul>
-                    <li>Fact Extraction Module</li>
+                    <li>Carbon-Assessed Agricultural Relation Extraction and Attribute Harvesting</li>
                     <p>The system first lists five predefined trending news topics, including the Syria refugee crisis, Iran nuclear issue, Volkswagen scandal, US presidential election, and the Chinese cooperation with Sudan. The topic words are used to induce document representations and appearing in each of topics. We pick several topic words under the topic of US presidential election, then the system shows a list of documents under this topic are ranked by the TF-IDF weights of the topic words in each document, and by default, the <a href="https://github.com/shengyp/Multi-Docs-semantics/tree/master/data/elections/documents">top-k documents</a> for this topic are selected for further processing. 
             </p>
             <p>The system relies on a series of natural language processing methods, including coreference resolution and open-domain information extraction, in which the subject, predicate, and object are natural language phrases extracted from the sentences within the top-k documents, as discussed above. These often correspond to syntactic subject, predicate, object, respectively, and can be obtained from <a href="https://github.com/shengyp/Multi-Docs-semantics/tree/master/data/elections/extracted-facts">here</a>.</p>
-                    <li>Fact Filtering Module</li>     
+                    <li>Carbon-Assessed Agricultural Crop Entity Grounding and Knowledge Subgraphs Merge</li>     
             <p>
             	The reached data from prior fact extraction module can be filtered such that only the most salient, confident, and compatible facts are maintained. That is, fact filtering module aims at hiding less representative facts in the visualization and the filtered results can be retrieved from <a href="https://github.com/shengyp/Multi-Docs-semantics/blob/master/data/elections/filtering-facts">here</a>.
             </p>
-                    <li>Conceptual Graph Construction Module</li>
+                    <li>Heuristic Rule for Agricultural Crop Knowledge Graph Construction</li>
                      <p>The expert annotators merge potential entities and concepts stemming from the fact filtering process, while a heuristic is employed to guarantee that the final graph is connected with high coverage rate of topic concepts, but might not find the subset of concepts that has the highest total importance score.
                      </p>
                 </ul>
@@ -80,10 +79,10 @@ and show how connections within this data can be explored.
             <p class="context"></p>
         </section>
         <section class="para">
-            <h3 class="para-title">Downloads</h3>
+            <h3 class="para-title">Supplementary materials</h3>
             <section class="para">
                 <p class="context">
-                     Our system is designed to operate on a large document collections that can then be searched for specific documents to be analysed. <a href="http://research.signalmedia.co/newsir16/signal-dataset.html">Our current corpus</a> consists of 734,488 news articles and 265,512 blog articles, in total around 1 million English-language articles, with an average article length of 405 words. The articles stem from a variety of news sources and were released by Signal Media during a period of one month (1–30 September 2015).
+                     Our framework also provides <a href="https://github.com/shengyp/CarCKGBuilder_SupMaterials">supplementary materials</a>, including the datasets, codes, and an appendix as evidence.
                 </p>
                 <div>
                     <a class="paperlink" href="./paper/Sheng2019_Vis.pdf" download="" title="Our paper(1.11MB)"><img class="paperImg" src="./paper/paper_surface.png" class="img"></a>
@@ -106,7 +105,8 @@ and show how connections within this data can be explored.
         </section>
         <section class="para">
             <h3 class="para-title">Acknowledgement</h3>
-            <p class="context">This paper was in part supported by Grants from the Natural Science Foundation of China (No. 61572111), the National High Technology Research and Development Program of China (863 Program) (No. 2015AA015408), a 985 Project of UESTC (No. A1098531023601041) and a Fundamental Research Funds for the Central Universities of China (No.A03017023701). Gerard de Melo's research is funded in part by ARO grant no. W911NF-17-C-0098 (DARPA SocialSim program).</p>
+            <p class="context">This work was supported by the National Natural Science Foundation of China (Grant No. 62202075, No. 62171111, No. 62376058, No. 62376043, No. 62002052). The Natural Science Foundation of Chongqing, China (2022NSCQ-MSX3749)
+            .</p>
             <p class="context">If you are interested in our works or have any problem, do not hesitate to contact me at shengyp2011@163.com.</p>
             <p class="context">Thanks and enjoy the journey.</p>
             <div>

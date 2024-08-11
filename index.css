@@ -14,11 +14,24 @@ img{
     weight: 470px;
     margin:0 0 0 40px;
 }
-.container{
+.container author{
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
-    width: 70%;
+    width: 90%;
+/*    margin: 0 auto;*/
+    padding: 0 2%;
+    padding:0px 20px 0px 0px;
+    background-color:#f2f2f2;
+    text-align: center;
+    /* border-radius: 10px; */
+    /* box-shadow: rgba(0, 0, 0,0.5) 0px 0px 3px ; */
+}
+.container {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 90%;
     margin: 0 auto;
     padding: 0 2%;
     background-color:#f2f2f2;
@@ -63,10 +76,10 @@ img{
     color:black;
 }
 .auther span{
-    margin:0 4px;
+    margin:0 9px;
 }
 .auther-apart span{
-    margin:0 8px;
+    margin:0 9px;
 } 
 .auther a,.auther-apart a{
     /**color: deepskyblue;**/
